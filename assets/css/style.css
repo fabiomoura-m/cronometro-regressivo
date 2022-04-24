@@ -6,38 +6,50 @@
 
 body{
   font-family: Arial, Helvetica, sans-serif;
-  background-color: #222;
+  background-color: #000;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+.container{
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-  gap: 20px;
-  margin: 40px;
-  
+  gap: 50px;
+  width: 730px;
+  height: 400px;
+  padding: 30px;
+  background-color: #6e6363a7;
+  border-radius: 5px;
+  box-shadow: 0px 0px 15px #fff;
+  color: #fff;
 }
 .section{
   display: flex;
   gap: 8px;
 }
-
 button{
   font-size: 16px;
   border: none;
-  color: white;
+  color: #fff;
   border-radius: 4px;
-  padding: 4px 12px;
+  padding: 5px 15px;
   cursor: pointer;
 }
 .start{
-  background-color: #495d4fb3;
+  background-color: #0e772dd5;
 }
 .start:hover{
   background-color: #495d4f;
 }
 .reset{
-  background-color: #6e6363ac;
+  background-color: #141414;
 }
 .reset:hover{
-  background-color: #6e6363;
+  background-color: #2524248f;
 }
 
 .emoji{
