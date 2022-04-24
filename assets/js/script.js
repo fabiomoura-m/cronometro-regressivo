@@ -33,9 +33,11 @@ function timer() {
   const minutes = Math.floor((total % hour) / minute);
   const seconds = Math.floor((total % minute) / second);
 
-  document.querySelector(
-    '.emoji'
-  ).innerHTML = `${days}d ${hours}h:${minutes}m:${seconds}s`;
+  document.querySelector('.emoji').innerHTML = `${days}d ${hours
+    .toString()
+    .padStart(2, 0)}h:${minutes.toString().padStart(2, 0)}m:${seconds
+    .toString()
+    .padStart(2, 0)}s`;
 }
 
 function stop() {
