@@ -11,6 +11,7 @@ const day = 24 * hour;
 let total;
 let finalDate;
 let intervalId;
+let currentDate = new Date().getTime();
 
 if (localStorage.getItem('timer')) {
   finalDate = localStorage.getItem('timer');
@@ -20,9 +21,15 @@ if (localStorage.getItem('timer')) {
 function startTimer() {
   const date = document.querySelector('#date').value;
   finalDate = new Date(date).getTime();
-  localStorage.setItem('timer', finalDate);
+  if (finalDate < currentDate) {
+    stop();
+    document.querySelector('.emoji').innerHTML = 'Data inválida';
+  } else {
+    stop();
+    localStorage.setItem('timer', finalDate);
 
-  intervalId = setInterval(timer, 1000);
+    intervalId = setInterval(timer, 1000);
+  }
 }
 
 function timer() {
